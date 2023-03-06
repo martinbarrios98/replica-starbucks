@@ -6,6 +6,7 @@ const GlobalStyles = createGlobalStyle`
         --gris: #777;
         --blanco: #fff;
         --negro: #000;
+        --gris_bajo: #f9f9f9;
         --fuentePrincipal: SoDo-Light;
         --fuentePrincipalSemiBold: SoDo-SemiBold;
         --fuentePrincipalRegular: SoDo-Regular;

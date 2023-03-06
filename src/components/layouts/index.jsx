@@ -11,7 +11,6 @@ import Header from '../ui/header';
 import Footer from '../ui/footer';
 
 export const ContainerStyles = styled.main`
-    min-height: 100vh;
 `;
 
 const Layout = ({ children, pagina, description }) => {
