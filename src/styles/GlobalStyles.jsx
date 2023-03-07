@@ -3,6 +3,8 @@ const { createGlobalStyle } = require("styled-components");
 const GlobalStyles = createGlobalStyle`
     :root{
         --verde: #00754a;
+        --verdeOscuro: #1e3932;
+        --verdeBajo: #d4e9e2;
         --gris: #777;
         --blanco: #fff;
         --negro: #000;
@@ -41,6 +43,10 @@ const GlobalStyles = createGlobalStyle`
         text-decoration: none;
         letter-spacing: .2rem;
         color: var(--negro);
+        outline: none;
+    }
+    button{
+        outline: none;
     }
     img {
         height: auto;

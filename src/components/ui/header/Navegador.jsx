@@ -2,6 +2,7 @@ import Link from 'next/link';
 import React from 'react'
 import styled from 'styled-components';
 import { FaMapMarkerAlt } from 'react-icons/fa'
+import { useRouter } from 'next/router';
 
 export const NavegadorStyles = styled.div`
     flex-basis: 100%;
@@ -15,7 +16,7 @@ export const NavegadorStyles = styled.div`
     transition: all .2s ease-in-out;
     @media (min-width: 768px){
         height: auto;
-        flex-basis: 85%;
+        flex-basis: 90%;
         padding: 0;
     }
     @media (min-width: 1024px){
@@ -66,6 +67,20 @@ export const NavegadorStyles = styled.div`
                         &::before{
                             background: var(--verde);
                         }
+                    }
+                }
+                &.activo{
+                    color: var(--verde);
+                    &::before{
+                        bottom: -.5rem;
+                        background: var(--verde);
+                        content: "";
+                        height: .5rem;
+                        display: block;
+                        position: absolute;
+                        width: 100%;
+                        transform: skew(25deg);
+                        transition: all .2s ease-in-out;
                     }
                 }
             }
@@ -134,6 +149,9 @@ export const BotonSecundario = styled.button`
 `;
 
 const Navegador = ({ menu }) => {
+
+    const { pathname } = useRouter();
+
     return (  
         <NavegadorStyles
             menu={menu}
@@ -143,6 +161,7 @@ const Navegador = ({ menu }) => {
                     <Link
                         href={'/menu'}
                         title="Menú"
+                        className={ pathname === '/menu' ? 'activo' : '' }
                     >Menú</Link>
                     <Link
                         href={'https://rewards.starbucks.mx/'}

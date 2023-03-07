@@ -21,6 +21,9 @@ const nextConfig = {
         pathname: '/s3fs-public/**',
       },
     ],
+  },
+  env:{
+    URL_BACK: 'http://localhost:3000'
   }
 }
 

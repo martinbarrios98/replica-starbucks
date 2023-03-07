@@ -13,6 +13,7 @@ export default function (req, res) {
                         id: v4(),
                         nombre: 'Bebidas calientes',
                         slug: 'calientes',
+                        img: 'https://djftrby1k8irl.cloudfront.net/s3fs-public/2022-03%2FFlat%20White%20425x425%20sin%20fondo.png?auto=format,compress&q=70&crop=focalpoint&ar=1:1.0&w=180&fit=crop&dpr=2',
                         lista_subcategorias:[
                             {
                                 id: v4(),
@@ -86,6 +87,7 @@ export default function (req, res) {
                         id: v4(),
                         nombre: 'Cold Brew',
                         slug: 'cold-brew',
+                        img: 'https://djftrby1k8irl.cloudfront.net/s3fs-public/2022-03%2FCold%20Brew%20Vainilla%20Sweet%20Cream%20425x425%20sin%20fondo.png?auto=format,compress&q=70&crop=focalpoint&ar=1:1.0&w=180&fit=crop&dpr=2',
                         lista_subcategorias:[
                             {
                                 id: v4(),
@@ -124,6 +126,7 @@ export default function (req, res) {
                         id: v4(),
                         nombre: 'Elige tu complemento favorito',
                         slug: 'elige-tu-complemento-favorito',
+                        img: 'https://djftrby1k8irl.cloudfront.net/s3fs-public/2022-02%2FSandwich%20Pavo%20Panela_1.png?auto=format,compress&q=70&crop=focalpoint&ar=1:1.0&w=180&fit=crop&dpr=2',
                         lista_subcategorias:[
                             {
                                 id: v4(),
@@ -178,9 +181,95 @@ export default function (req, res) {
                                 id: v4(),
                                 nombre: 'Panadería',
                                 lista_productos:[
-                                    //TODO: CONTINUAR AGREGANDO PRODUCTOS
+                                    {
+                                        id: v4(),
+                                        nombre: 'Panque de linaza',
+                                        slug: 'panque-de-linaza',
+                                        calorias: 'Kcal 273,6',
+                                        descripcion: null,
+                                        img: 'https://djftrby1k8irl.cloudfront.net/s3fs-public/2022-02%2FPanque%20de%20Linaza_1.png?auto=format,compress&q=70&crop=focalpoint&ar=1:1.0&w=180&fit=crop&dpr=2',
+                                        ingredientes: 'Leche entera, harina de trigo, azúcar moscabado, huevo entero, aceite comestible, granola (hojuelas de avena, hojuelas de maíz, sémola de trigo, almendras, arroz inflado, aceite vegetal de soya, polidextrosa, saborizante natural y artificial,glicerina, sucralosa, sal yodada y antioxidante BHT), miel de abeja, arándano, uva pasa, germen de trigo, linaza, vinagre, monoglicéridos, almidón modificado de trigo, bicarbonato de sodio, canela molida, fibra de avena, leudante (carbonato de calcio, bicarbonato de sodio, sulfato de aluminio y pirofosfato ácido de sodio), propionato de calcio (como conservador), extracto de vainilla, sal yodatada y goma xantana.',
+                                        alergenos: 'Gluten, huevo y leche. Puede contener trazas de almendra y nuez',
+                                        informacion_nutricional: [
+                                            'Kcal Tot. 273,6',
+                                            'Tamaño de la porción: 145g',
+                                            'Proteínas: 58g',
+                                            'Grasas: 72,5g',
+                                            'Grasa saturada: 29g',
+                                            'Carbohidratos: 449,5g',
+                                            'Azucares: 391,5g',
+                                            'Fibra dietética: 29g',
+                                            'Sodio: 2755mg'
+                                        ]
+                                    },
+                                    {
+                                        id: v4(),
+                                        nombre: 'Panque de limón',
+                                        slug: 'panque-de-limon',
+                                        calorias: 'Kcal 460,8',
+                                        descripcion: null,
+                                        img: 'https://djftrby1k8irl.cloudfront.net/s3fs-public/2022-02%2FPanque%20de%20Limon_1.png?auto=format,compress&q=70&crop=focalpoint&ar=1:1.0&w=180&fit=crop&dpr=2',
+                                        ingredientes: 'Azúcar refinada, harina de trigo, crema ácida, huevo, aceite comestible de canola, mono y diglicéridos destilados, estearoil lactilato de sodio, leudante (carbonato de calcio, bicarbonato de sodio, sulfato dealuminio y pirofosfato ácido de sodio), sabor limón, sal yodatada, goma xantana, sorbato de potasio (como conservador), agua y color verde.',
+                                        alergenos: 'Gluten, huevo y derivados lácteosPuede contener trazas de soya, nuez y cacahuates.',
+                                        informacion_nutricional: [
+                                            'Kcal Tot. 460,8',
+                                            'Tamaño de la porción: 125g',
+                                            'Proteínas: 5,8g',
+                                            'Grasas: 19,75g',
+                                            'Grasa saturada: 1,6375g',
+                                            'Carbohidratos: 64,9625g',
+                                            'Azucares: 40,425g',
+                                            'Fibra dietética: 0g',
+                                            'Sodio: 215,5mg'
+                                        ]
+                                    }
                                 ]
                             },
+                        ]
+                    }
+                ]
+            }
+        },
+        {   
+            id: v4(),
+            nombre: 'Café en grano',
+            slug: 'cafe-en-grano',
+            lista_categorias:{
+                categorias:[
+                    {
+                        id: v4(),
+                        nombre: 'Elige tu café favorito',
+                        slug: 'elige-tu-cafe-favorito',
+                        img: 'https://djftrby1k8irl.cloudfront.net/s3fs-public/2022-02%2FChiapas_1.png?auto=format,compress&q=70&crop=focalpoint&ar=1:1.0&w=180&fit=crop&dpr=2',
+                        lista_subcategorias:[
+                            {
+                                id: v4(),
+                                nombre: 'Café de línea',
+                                lista_productos:[
+                                    {
+                                        id: v4(),
+                                        nombre: 'Café Verona',
+                                        slug: 'cafe-verona',
+                                        calorias: null,
+                                        descripcion: null,
+                                        img: 'https://djftrby1k8irl.cloudfront.net/s3fs-public/2022-02%2FVerona_1.png?auto=format,compress&q=70&crop=focalpoint&ar=1:1.0&w=180&fit=crop&dpr=2',
+                                        ingredientes: null,
+                                        alergenos: null,
+                                        informacion_nutricional: null
+                                    },
+                                    {
+                                        id: v4(),
+                                        nombre: 'Café Chiapas',
+                                        slug: 'cafe-chiapas',
+                                        calorias: null,
+                                        descripcion: null,
+                                        img: 'https://djftrby1k8irl.cloudfront.net/s3fs-public/2022-02%2FChiapas_1.png?auto=format,compress&q=70&crop=focalpoint&ar=1:1.0&w=180&fit=crop&dpr=2',
+                                        ingredientes: null,
+                                        alergenos: null,
+                                        informacion_nutricional: null
+                                    },
+                                ]
+                            }
                         ]
                     }
                 ]
