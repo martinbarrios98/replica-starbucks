@@ -1,15 +1,22 @@
 import Layout from '@/components/layouts';
+import SlugMenu from '@/components/menu/SlugMenu';
 import axios from 'axios';
 import React from 'react';
 
 const SlugBebidasPage = ({ menu, error }) => {
-    console.log(menu, error);
     return (  
         <Layout
             pagina={'Menú - Bebidas'}
             description='Menú - Bebidas starbucks, los mejores cafes y servicios que nuestros clientes merece.'
         >
-            <h1>Desde slug</h1>
+            {
+                error ?
+                    <p>Error</p>
+                : 
+                    <SlugMenu 
+                        menu={menu}
+                    />
+            }
         </Layout>
     );
 }
@@ -35,7 +42,7 @@ export const getServerSideProps = async (context) => {
 
         return{
             props:{
-                menu: data.menu,
+                menu: data.menu[0],
                 error: null
             }
         }

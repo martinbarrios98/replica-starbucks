@@ -3,7 +3,7 @@ import Link from 'next/link';
 import React from 'react'
 import styled from 'styled-components';
 
-export const CategoriasStyles = styled.ul`
+export const ProductosStyles = styled.ul`
     list-style: none;
     padding: 0;
     display: grid;
@@ -19,7 +19,7 @@ export const CategoriasStyles = styled.ul`
     @media (min-width: 1280px){
         gap: 10rem;
     }
-    .item-categoria{
+    .item-producto{
         display: grid;
         gap: 1rem;
         @media (min-width: 1024px){
@@ -55,35 +55,35 @@ export const CategoriasStyles = styled.ul`
 `;
 
 
-const Categorias = ({ menu_padre, categorias }) => {
+const Productos = ({ productos }) => {
     return (  
-        <CategoriasStyles>
+        <ProductosStyles>
             {
-                categorias.map( ct => (
+                productos.map( pr => (
                     <Link
-                        href={`/menu/${menu_padre.slug}/${ct.slug}`}
-                        title={ct.nombre}
+                        href={`/producto/${pr.slug}`}
+                        title={pr.nombre}
                         target={'_self'}
-                        key={ct.id}
+                        key={pr.id}
                         passHref
                     >
-                        <li className='item-categoria' >
+                        <li className='item-producto' >
                             <div className='contenedor-img' >
                                 <Image 
-                                    src={ct.img}
-                                    alt={ct.nombre}
-                                    title={ct.nombre}
+                                    src={pr.img}
+                                    alt={pr.nombre}
+                                    title={pr.nombre}
                                     width={1400}
                                     height={1000}
                                 />
                             </div>
-                            <p>{ct.nombre}</p>
+                            <p>{pr.nombre}</p>
                         </li>
                     </Link>
                 ) )
             }
-        </CategoriasStyles>
+        </ProductosStyles>
     );
 }
  
-export default Categorias;
+export default Productos;
